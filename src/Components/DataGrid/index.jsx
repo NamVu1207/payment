@@ -242,7 +242,6 @@ const DataGrid = forwardRef(
             maxHeight: maxHeight,
             ...style,
           }}
-          defaultColumnOptions={{ sortable: true, resizable: true }}
           sortColumns={sortColumns}
           onSortColumnsChange={setSortColumns}
           rows={currentRows}
