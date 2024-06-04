@@ -244,16 +244,16 @@ const DataGrid = forwardRef(
             maxHeight: maxHeight,
             ...style,
           }}
-          renderers={{
-            noRowsFallback: (
-              <Title
-                level={5}
-                style={{ color: "#818181", gridColumn: "1/-1", margin: "10px" }}
-              >
-                --- Không có dữ liệu ---
-              </Title>
-            ),
-          }}
+          // renderers={{
+          //   noRowsFallback: (
+          //     <Title
+          //       level={5}
+          //       style={{ color: "#818181", gridColumn: "1/-1", margin: "10px" }}
+          //     >
+          //       --- Không có dữ liệu ---
+          //     </Title>
+          //   ),
+          // }}
           sortColumns={sortColumns}
           onSortColumnsChange={setSortColumns}
           rows={currentRows}
