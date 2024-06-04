@@ -18,7 +18,15 @@ const { Search } = Input;
 const SearchTransaction = () => {
   const onFocus = () => {};
   const gridRef = React.createRef();
-  const [rows, setRows] = React.useState([]);
+  const [rows, setRows] = React.useState([
+    {
+      "ID":1,
+      "JobStatus":"aaaaaaa",
+      "StatusMarker":"aaaaaaa",
+      "BillOfLading":"aaaaaaa",
+      "CargoCtrlNo":"aaaaaaa",
+    }
+  ]);
   const [form] = Form.useForm();
   
   const buttonConfirm = () => {}; // Action cua cac button
@@ -55,108 +63,6 @@ const SearchTransaction = () => {
       key: "CargoCtrlNo",
       name: "Số Định Danh",
       width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "CntrNo",
-      name: "Số Container",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "GetIn",
-      name: "Ngày Getin",
-      width: 200,
-      type: columnTypes.DatePicker,
-    },
-    {
-      key: "TransportIdentity",
-      name: "Tên Tàu",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "NumberOfJourney",
-      name: "Chuyến Tàu",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "ArrivalDeparture",
-      name: "Ngày tàu đến",
-      width: 200,
-      type: columnTypes.DatePicker,
-    },
-    {
-      key: "ImExType",
-      name: "Nhập/Xuất",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "StatusOfGood",
-      name: "Full/Empty",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "JobModeIn",
-      name: "Phương Án Vào",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "CargoWeight",
-      name: "Trọng Lượng",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "SealNo",
-      name: "Số Chì",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "CommodityDescription",
-      name: "Mô Tả HH",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "ContainerLocation",
-      name: "Vị Trí Count",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "Content",
-      name: "Ghi Chú",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "AcceptanceNo",
-      name: "Số Tiếp Nhận",
-      width: 150,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "AcceptanceTime",
-      name: "Ngày Tiếp Nhận",
-      width: 220,
-      type: columnTypes.DatePicker,
-    },
-    {
-      key: "ResponseText",
-      name: "Nội Dung Phản Hồi",
-      width: 180,
-      type: columnTypes.TextEditor,
-    },
-    {
-      key: "MsgRef",
-      name: "Khóa Tham Chiếu",
-      width: 300,
       type: columnTypes.TextEditor,
     },
   ]);
