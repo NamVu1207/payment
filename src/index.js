@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import "react-data-grid/lib/styles.css";
+// import "react-data-grid/lib/styles.css";
 import Router from "./Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
