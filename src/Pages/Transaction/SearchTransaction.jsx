@@ -18,15 +18,7 @@ const { Search } = Input;
 const SearchTransaction = () => {
   const onFocus = () => {};
   const gridRef = React.createRef();
-  const [rows, setRows] = React.useState([
-    {
-      "ID":1,
-      "JobStatus":"aaaaaaa",
-      "StatusMarker":"aaaaaaa",
-      "BillOfLading":"aaaaaaa",
-      "CargoCtrlNo":"aaaaaaa",
-    }
-  ]);
+  const [rows, setRows] = React.useState([]);
   const [form] = Form.useForm();
   
   const buttonConfirm = () => {}; // Action cua cac button
@@ -62,6 +54,42 @@ const SearchTransaction = () => {
     {
       key: "CargoCtrlNo",
       name: "Số Định Danh",
+      width: 150,
+      type: columnTypes.TextEditor,
+    },
+    {
+      key: "CntrNo",
+      name: "Số Container",
+      width: 150,
+      type: columnTypes.TextEditor,
+    },
+    {
+      key: "GetIn",
+      name: "Ngày Getin",
+      width: 200,
+      type: columnTypes.DatePicker,
+    },
+    {
+      key: "TransportIdentity",
+      name: "Tên Tàu",
+      width: 150,
+      type: columnTypes.TextEditor,
+    },
+    {
+      key: "NumberOfJourney",
+      name: "Chuyến Tàu",
+      width: 150,
+      type: columnTypes.TextEditor,
+    },
+    {
+      key: "ArrivalDeparture",
+      name: "Ngày tàu đến",
+      width: 200,
+      type: columnTypes.DatePicker,
+    },
+    {
+      key: "ImExType",
+      name: "Nhập/Xuất",
       width: 150,
       type: columnTypes.TextEditor,
     },
