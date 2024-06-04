@@ -8,9 +8,11 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { Pagination } from "antd";
+import { Pagination, Typography } from "antd";
 import ReactDataGrid, { SelectColumn, textEditor } from "react-data-grid";
 import { renderCellEditDatePicker } from "./renderCellEditDatePicker";
+
+const { Title } = Typography;
 
 export const selectionTypes = {
   multi: "multi",
@@ -244,16 +246,16 @@ const DataGrid = forwardRef(
             maxHeight: maxHeight,
             ...style,
           }}
-          // renderers={{
-          //   noRowsFallback: (
-          //     <Title
-          //       level={5}
-          //       style={{ color: "#818181", gridColumn: "1/-1", margin: "10px" }}
-          //     >
-          //       --- Không có dữ liệu ---
-          //     </Title>
-          //   ),
-          // }}
+          renderers={{
+            noRowsFallback: (
+              <Title
+                level={5}
+                style={{ color: "#818181", gridColumn: "1/-1", margin: "10px" }}
+              >
+                --- Không có dữ liệu ---
+              </Title>
+            ),
+          }}
           sortColumns={sortColumns}
           onSortColumnsChange={setSortColumns}
           rows={currentRows}
