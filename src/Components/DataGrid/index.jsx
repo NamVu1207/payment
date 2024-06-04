@@ -250,7 +250,12 @@ const DataGrid = forwardRef(
             noRowsFallback: (
               <Title
                 level={5}
-                style={{ color: "#818181", gridColumn: "1/-1", margin: "10px" }}
+                style={{
+                  color: "#818181",
+                  gridColumn: "1/-1",
+                  margin: "10px",
+                  height: "100%",
+                }}
               >
                 --- Không có dữ liệu ---
               </Title>
