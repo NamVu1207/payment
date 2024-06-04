@@ -114,6 +114,8 @@ const DataGrid = forwardRef(
       setCurrenPage(1);
     }, [rows]);
 
+    const sColumn = [SelectColumn, ...columns];
+
     useEffect(() => {
       const start_index = (currentPage - 1) * limit;
       const dataRowCurrent = rows.slice(start_index, start_index + limit);
@@ -263,7 +265,7 @@ const DataGrid = forwardRef(
           sortColumns={sortColumns}
           onSortColumnsChange={setSortColumns}
           rows={currentRows}
-          columns={columns}
+          columns={sColumn}
           selectedRows={selectedRows}
           rowHeight={30}
           direction={direction}
