@@ -46,8 +46,7 @@ const handleRenderColumn = ({
   type = columnTypes.TextEditor,
   editable = true,
   visible = false,
-  sortable = true, 
-  resizable = true,
+  render,
   key,
   selection,
   index,
@@ -57,6 +56,8 @@ const handleRenderColumn = ({
     ...props,
     key,
     renderEditCell: editable ? getEditCell(key, type) : null,
+    sortable: true, 
+    resizable: true 
   };
 
   // Hide column when visible = true
