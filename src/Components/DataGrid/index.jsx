@@ -57,7 +57,7 @@ const handleRenderColumn = ({
   const column = {
     ...props,
     key,
-    renderEditCell: editable ? getEditCell(key, type) : null,
+    // renderEditCell: editable ? getEditCell(key, type) : null,
     // sortable: true,
     // resizable: true
   };
