@@ -56,7 +56,7 @@ const handleRenderColumn = ({
     ...props,
     key,
     renderEditCell: editable ? getEditCell(key, type) : null,
-    // sortable: true, 
+    // sortable: true,
     // resizable: true
   };
 
@@ -243,6 +243,16 @@ const DataGrid = forwardRef(
             height: "calc(100% - 40px)",
             maxHeight: maxHeight,
             ...style,
+          }}
+          renderers={{
+            noRowsFallback: (
+              <Title
+                level={5}
+                style={{ color: "#818181", gridColumn: "1/-1", margin: "10px" }}
+              >
+                --- Không có dữ liệu ---
+              </Title>
+            ),
           }}
           sortColumns={sortColumns}
           onSortColumnsChange={setSortColumns}
