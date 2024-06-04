@@ -57,7 +57,7 @@ const handleRenderColumn = ({
     key,
     renderEditCell: editable ? getEditCell(key, type) : null,
     // sortable: true, 
-    resizable: true 
+    // resizable: true
   };
 
   // Hide column when visible = true
