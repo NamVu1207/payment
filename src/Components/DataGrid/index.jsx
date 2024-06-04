@@ -254,7 +254,6 @@ const DataGrid = forwardRef(
                   color: "#818181",
                   gridColumn: "1/-1",
                   margin: "10px",
-                  height: "100%",
                 }}
               >
                 --- Không có dữ liệu ---
